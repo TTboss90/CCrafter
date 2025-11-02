@@ -90,7 +90,7 @@ src/
     "archiver": ["ar","rcs"],
 
     "Projects": [
-        "./src/mainProj"
+        "./src/main"
     ]
 }
 ```
@@ -108,16 +108,14 @@ src/
     "libraries": [],
 
     "deps":[
-        "./src/sideProj"
+        "./src/mathlib"
     ],
 
     "Out_structure":[
         "./img"
     ],
 
-    "Out_Files":{
-        "./img/img_name":"./imgsrc/img.jpg"
-    },
+    "Out_Files":{},
 
     "Post_script":"./out/bin/main",
 
