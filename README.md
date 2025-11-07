@@ -8,13 +8,15 @@ to start do this in a empty folder
 
 ```python CCrafter.py```
 
-^this makes 
+^this makes
 
 ```
 ./
 CCrafter.py
 settings.json
 src/
+    main/
+        settings.json
 ```
 
 to make a proj do
@@ -40,6 +42,8 @@ to rm out do
 to rebuild do
 ```python CCrafter.py rebuild```
 
+to build do
+```python CCrafter.py```
 
 ## settings explained
 the ./settings.json file is simple
@@ -66,6 +70,8 @@ Out_type exec or static_lib
 
 Out_File is in bin
 
+file_flags is to add file specific flags
+
 ## a example
 folder structure
 ```
@@ -90,7 +96,7 @@ src/
     "archiver": ["ar","rcs"],
 
     "Projects": [
-        "./src/main"
+        "./src/mainProj"
     ]
 }
 ```
@@ -107,15 +113,19 @@ src/
 
     "libraries": [],
 
+    "file_flags":{},
+
     "deps":[
-        "./src/mathlib"
+        "./src/sideProj"
     ],
 
     "Out_structure":[
         "./img"
     ],
 
-    "Out_Files":{},
+    "Out_Files":{
+        "./img/img_name":"./imgsrc/img.jpg"
+    },
 
     "Post_script":"./out/bin/main",
 
@@ -133,6 +143,10 @@ src/
     "Include_paths":[],
 
     "libraries": [],
+
+    "file_flags":{
+        "math.c":["-O1"]
+    },
 
     "deps":[],
 
@@ -173,10 +187,7 @@ int main(){
 ```
 
 ## to do
-starding proj
 
 shared libs(so/dll)
 
 auto downloading deps
-
-file spesifik flags
