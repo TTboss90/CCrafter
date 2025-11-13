@@ -14,7 +14,9 @@ BSettings ={
     "Compiler":["gcc"],
     "archiver":["ar","rcs"],
 
-    "Projects":[]
+    "Projects":[
+        "./src/main"
+    ]
 }'''
 }
 PSettings ={
